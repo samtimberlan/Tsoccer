@@ -1,0 +1,16 @@
+{
+  "name": "Tsoccer",
+  "version": "1.0.0",
+  "description": "An app to get footballers unite and collaborate better.",
+  "main": "index.js",
+  "repository": "https://github.com/samtimberlan/Tsoccer",
+  "author": "Tim Udoma",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dependable": "^1.1.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  }
+}
