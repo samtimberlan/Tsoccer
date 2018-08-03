@@ -13,7 +13,12 @@ const passport = require("passport");
 
 container.resolve(function(users) {
   mongoose.Promise = global.Promise;
-  // mongoose.connect("mongodb://localhost/tsoccer");
+  mongoose
+    .connect(
+      "mongodb://localhost:27017/tsoccer",
+      { useNewUrlParser: true }
+    )
+    .then(console.log("Database Connected"));
   const app = SetupExpressServer();
 
   function SetupExpressServer() {
