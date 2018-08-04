@@ -10,6 +10,7 @@ const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const passport = require("passport");
+//require("./passport/passport-local")(passport);
 
 container.resolve(function(users) {
   mongoose.Promise = global.Promise;
