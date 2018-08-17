@@ -12,7 +12,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 //require("./passport/passport-local")(passport);
 
-container.resolve(function(users) {
+container.resolve(function(users, lodash) {
   mongoose.Promise = global.Promise;
   mongoose
     .connect(
@@ -39,6 +39,7 @@ container.resolve(function(users) {
   }
 
   function ConfigureExpress(app) {
+    require("./passport/passport-local");
     app.use(express.static("public"));
     app.use(cookieParser());
     app.set("view engine", "ejs");
@@ -57,5 +58,7 @@ container.resolve(function(users) {
     app.use(flash());
     app.use(passport.initialize());
     app.use(passport.session());
+
+    app.locals.lodash = lodash;
   }
 });

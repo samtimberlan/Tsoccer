@@ -68,29 +68,41 @@
           Register
         </h1>
 
-        <div class="inset">
-          <p>
-            <label for="username">USERNAME</label>
-            <input type="text" name="username" class="" placeholder="">
-          </p>
+        <% if(hasErrors){ %>
+          <div class="alert alert-danger text-center">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">$times;</a>
+          </div>
+          <% lodash.foreach(messages, function(error){
+          %>
+            <%= error %>
+              <br>
 
-          <p>
-            <label for="email">EMAIL ADDRESS</label>
-            <input type="text" name="email" placeholder="" />
-          </p>
-          <p>
-            <label for="password">PASSWORD</label>
-            <input type="password" name="password" placeholder="" />
-          </p>
+              <%})%>
+                <% } %>
 
-        </div>
+                  <div class="inset">
+                    <p>
+                      <label for="username">USERNAME</label>
+                      <input type="text" name="username" class="" placeholder="">
+                    </p>
 
-        <p class="p-container">
-          <span>
-            <a href="/">Login</a>
-          </span>
-          <input type="submit" class="login-log" value="Register">
-        </p>
+                    <p>
+                      <label for="email">EMAIL ADDRESS</label>
+                      <input type="text" name="email" placeholder="" />
+                    </p>
+                    <p>
+                      <label for="password">PASSWORD</label>
+                      <input type="password" name="password" placeholder="" />
+                    </p>
+
+                  </div>
+
+                  <p class="p-container">
+                    <span>
+                      <a href="/">Login</a>
+                    </span>
+                    <input type="submit" class="login-log" value="Register">
+                  </p>
       </form>
     </div>
   </div>

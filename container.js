@@ -11,6 +11,7 @@ simpleDependencies.forEach(function(val) {
   });
 });
 
+//All files in these folders would be injected into the params of the requested file.
 container.load(path.join(__dirname, "/controllers"));
 container.load(path.join(__dirname, "/helpers"));
 
