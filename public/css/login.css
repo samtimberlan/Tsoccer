@@ -46,11 +46,11 @@ form {
     position: relative;
     box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 form:after {
@@ -92,11 +92,11 @@ input[type=submit] {
     -moz-transition: box-shadow 500ms linear;
     -ms-transition: box-shadow 500ms linear;
     -o-transition: box-shadow 500ms linear;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 input[type=submit]:hover {
@@ -118,11 +118,11 @@ input[type=submit]:hover {
     padding-left: 18px;
     padding-right: 18px;
     font-size: 17px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 .inset {
@@ -164,6 +164,7 @@ label {
 
 input[type=text],
 input[type=password],
+input[type=email],
 .select {
     font-family: 'Open Sans', sans-serif;
     width: 100%;
@@ -181,11 +182,11 @@ input[type=password],
     -moz-transition: -moz-box-shadow .45s, border-color .45s ease-in-out;
     -o-transition: box-shadow .45s, border-color .45s ease-in-out;
     transition: box-shadow .45s, border-color .45s ease-in-out;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 
 input[type=text]:focus,
@@ -240,4 +241,34 @@ footer .container .text-muted {
 .footer>.container {
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.btn-facebook {
+    background: #3e1940;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
+    background: #fff;
+    transition: background 0.9s ease;
+    -webkit-transition: background 0.9s ease;
+    -moz-transition: background 0.9s ease;
+    -ms-transition: background 0.9s ease;
+    -o-transition: background 0.9s ease;
+}
+
+.btn-facebook:link,
+.btn-facebook:visited {
+    color: #3e1940;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
+}
+
+.btn-facebook:hover,
+.btn-facebook:active {
+    background: #3e1940;
+    color: #fff;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
 }

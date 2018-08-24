@@ -40,6 +40,8 @@ container.resolve(function(users, lodash) {
 
   function ConfigureExpress(app) {
     require("./passport/passport-local");
+    require("./passport/passport-facebook");
+
     app.use(express.static("public"));
     app.use(cookieParser());
     app.set("view engine", "ejs");

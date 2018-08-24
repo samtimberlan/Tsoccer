@@ -45,3 +45,30 @@ passport.use(
     }
   )
 );
+
+passport.use(
+  "local.login",
+  new localStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password",
+      passReqToCallback: true
+    },
+    (req, email, password, done) => {
+      User.findOne({ email: email }).then(user => {
+        const messages = [];
+
+        if (!user) {
+          messages.push("Email does not exist.");
+          return done(null, false, req.flash("loginError", messages));
+        }
+        if (user.validUserPassword(password)) {
+          return done(null, user);
+        } else {
+          messages.push("Password is incorrect.");
+          return done(null, false, req.flash("loginError", messages));
+        }
+      });
+    }
+  )
+);
