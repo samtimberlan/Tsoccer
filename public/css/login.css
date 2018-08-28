@@ -244,7 +244,9 @@ footer .container .text-muted {
 }
 
 .btn-facebook {
-    background: #3e1940;
+    /*background: #3e1940;
+    */
+    background: #4267B2;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -252,23 +254,55 @@ footer .container .text-muted {
     -o-border-radius: 3px;
     box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
     background: #fff;
-    transition: background 0.9s ease;
-    -webkit-transition: background 0.9s ease;
-    -moz-transition: background 0.9s ease;
-    -ms-transition: background 0.9s ease;
-    -o-transition: background 0.9s ease;
+    transition: background 0.4s ease;
+    -webkit-transition: background 0.4s ease;
+    -moz-transition: background 0.4s ease;
+    -ms-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
 }
 
 .btn-facebook:link,
 .btn-facebook:visited {
-    color: #3e1940;
+    color: #4267B2;
     text-decoration: none;
     box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
 }
 
 .btn-facebook:hover,
 .btn-facebook:active {
-    background: #3e1940;
-    color: #fff;
+    /* background: #3e1940; */
+    color: #3e1940;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
+}
+
+.btn-gplus {
+    /*background: #3e1940;
+    */
+    background: #4267B2;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
+    background: #fff;
+    transition: background 0.4s ease;
+    -webkit-transition: background 0.4s ease;
+    -moz-transition: background 0.4s ease;
+    -ms-transition: background 0.4s ease;
+    -o-transition: background 0.4s ease;
+}
+
+.btn-gplus:link,
+.btn-gplus:visited {
+    color: #4267B2;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
+}
+
+.btn-gplus:hover,
+.btn-gplus:active {
+    /* background: #3e1940; */
+    color: #3e1940;
     box-shadow: 0 0 20px 0.5px rgba(0, 0, 0, .1);
 }

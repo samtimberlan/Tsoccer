@@ -10,7 +10,7 @@ const MongoStore = require("connect-mongo")(session);
 const mongoose = require("mongoose");
 const flash = require("connect-flash");
 const passport = require("passport");
-//require("./passport/passport-local")(passport);
+//require("./passport/passport-local");
 
 container.resolve(function(users, lodash) {
   mongoose.Promise = global.Promise;
@@ -41,6 +41,7 @@ container.resolve(function(users, lodash) {
   function ConfigureExpress(app) {
     require("./passport/passport-local");
     require("./passport/passport-facebook");
+    require("./passport/passport-google");
 
     app.use(express.static("public"));
     app.use(cookieParser());

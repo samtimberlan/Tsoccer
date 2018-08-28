@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt-nodejs");
+const findOrCreate = require("mongoose-find-or-create");
 
 const userSchema = mongoose.Schema({
   username: { type: String, unique: true },
   fullname: { type: String, unique: true, default: "" },
-  email: { type: String, unique: true },
+  email: { type: String },
   password: { type: String, default: "" },
   userImage: { type: String, default: "default.png" },
   facebook: { type: String, default: "" },
@@ -12,6 +13,9 @@ const userSchema = mongoose.Schema({
   google: { type: String, default: "" },
   googleTokens: Array
 });
+
+// Add findOrCreate plugin to Mongoose
+userSchema.plugin(findOrCreate);
 
 userSchema.methods.encryptPasword = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null);

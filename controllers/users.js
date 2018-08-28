@@ -4,10 +4,14 @@
 module.exports = function(lodash, passport, userValidation) {
   return {
     SetRouting: function(router) {
+      //GET routes
       router.get("/", this.indexPage);
       router.get("/signup", this.getSignUp);
-      router.get("home", this.homePage);
+      router.get("/home", this.homePage);
+      router.get("/auth/facebook", this.getFacebookLogin);
+      router.get("/auth/facebook/callback", this.facebookLoginCallback);
 
+      //POST routes
       router.post("/", userValidation.loginValidation, this.postLogin);
       router.post("/signup", userValidation.signUpValidation, this.postSignUp);
     },
@@ -39,6 +43,16 @@ module.exports = function(lodash, passport, userValidation) {
     }),
     homePage: function(req, res) {
       return res.render("home");
-    }
+    },
+
+    getFacebookLogin: passport.authenticate("facebook", {
+      scope: "email"
+    }),
+
+    facebookLoginCallback: passport.authenticate("facebook", {
+      successRedirect: "/home",
+      failureRedirect: "/signup",
+      failureFlash: true
+    })
   };
 };
