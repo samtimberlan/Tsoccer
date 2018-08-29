@@ -10,6 +10,8 @@ module.exports = function(lodash, passport, userValidation) {
       router.get("/home", this.homePage);
       router.get("/auth/facebook", this.getFacebookLogin);
       router.get("/auth/facebook/callback", this.facebookLoginCallback);
+      router.get("/auth/google", this.getGoogleLogin);
+      router.get("/auth/google/callback", this.googleLoginCallback);
 
       //POST routes
       router.post("/", userValidation.loginValidation, this.postLogin);
@@ -51,7 +53,20 @@ module.exports = function(lodash, passport, userValidation) {
 
     facebookLoginCallback: passport.authenticate("facebook", {
       successRedirect: "/home",
-      failureRedirect: "/signup",
+      failureRedirect: "/",
+      failureFlash: true
+    }),
+
+    getGoogleLogin: passport.authenticate("google", {
+      scope: [
+        "https://www.googleapis.com/auth/plus.login",
+        "https://www.googleapis.com/auth/userinfo.email"
+      ]
+    }),
+
+    googleLoginCallback: passport.authenticate("google", {
+      successRedirect: "/home",
+      failureRedirect: "/",
       failureFlash: true
     })
   };

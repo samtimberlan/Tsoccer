@@ -30,11 +30,12 @@ passport.use(
           return done(err);
         }
 
-        if (user.email != null || user.email == profile._json.email) {
-          return done(null, user);
-        }
-
         if (user) {
+          //-----This line checks if the user previously registered via local auth and signs him in if positive
+          if (user.email == profile._json.email) {
+            return done(null, user);
+          }
+          //---------------
           done(null, user);
         } else {
           const newUser = new User();

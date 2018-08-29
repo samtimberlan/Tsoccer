@@ -10,8 +10,7 @@ const userSchema = mongoose.Schema({
   userImage: { type: String, default: "default.png" },
   facebook: { type: String, default: "" },
   facebookTokens: Array,
-  google: { type: String, default: "" },
-  googleTokens: Array
+  google: { type: String, default: "" }
 });
 
 // Add findOrCreate plugin to Mongoose
