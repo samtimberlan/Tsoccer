@@ -8,15 +8,26 @@
 <body>
   <% include ./partials/_header %>
   <div class="container-fluid">
-    <form action="/dashboard" method="POST">
-      <input type="text" name="club" placeholder="Club Name" class="form-control">
-      <input type="text" name="country" placeholder="Country" class="form-control">
-      <input type="button" value="Upload File" class="btn btn-lg upload-btn">
-      <input type="file" name="upload" id="uploadInput" style="display:none;">
-    </form>
+    <div class="row">
+      <div class="col-md-4">
+        <form action="/dashboard" method="POST">
+          <div class="form-group">
+            <input type="text" name="club" placeholder="Club Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="country" placeholder="Country" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="button" value="Upload File" class="btn btn-lg upload-btn">
+          </div>
+          <input type="file" name="upload" id="uploadInput" style="display:none;">
+        </form>
+      </div>
+    </div>
 
 
     <% include ./partials/_footer %>
+    <script src="/js/upload.js"></script>
   </div>
 </body>
 
