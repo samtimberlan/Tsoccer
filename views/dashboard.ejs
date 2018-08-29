@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ./partials/_head %>
+</head>
+
+<body>
+  <% include ./partials/_header %>
+  <div class="container-fluid">
+    <form action="/dashboard" method="POST">
+      <input type="text" name="club" placeholder="Club Name" class="form-control">
+      <input type="text" name="country" placeholder="Country" class="form-control">
+      <input type="button" value="Upload File" class="btn btn-lg upload-btn">
+      <input type="file" name="upload" id="uploadInput" style="display:none;">
+    </form>
+
+
+    <% include ./partials/_footer %>
+  </div>
+</body>
+
+</html>

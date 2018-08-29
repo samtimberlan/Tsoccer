@@ -12,7 +12,7 @@ const flash = require("connect-flash");
 const passport = require("passport");
 //require("./passport/passport-local");
 
-container.resolve(function(users, lodash) {
+container.resolve(function(users, lodash, admin) {
   mongoose.Promise = global.Promise;
   mongoose
     .connect(
@@ -34,6 +34,9 @@ container.resolve(function(users, lodash) {
     //Setup router
     const router = require("express-promise-router")();
     users.SetRouting(router);
+    admin.setRouting(router);
+
+    //NB: SetRouting is an arbitrary name
 
     app.use(router);
   }
