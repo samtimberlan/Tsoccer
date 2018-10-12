@@ -3,6 +3,8 @@
 const path = require("path"); // Helps me define path on my local system
 const fs = require("fs"); //Enables me to rename files
 
+const formidable = require("formidable");
+
 module.exports = function(formidable) {
   return {
     setRouting: function(router) {
@@ -16,7 +18,7 @@ module.exports = function(formidable) {
     },
 
     uploadFile: function(req, res) {
-      const form = formidable.IncomingForm();
+      const form = new formidable.IncomingForm();
       form.uploadDir = path.join(__dirname, "../public/uploads");
 
       //Handle file upload and rename file
@@ -36,6 +38,8 @@ module.exports = function(formidable) {
       form.on("end", () => {
         console.log("File upload is successful");
       });
+
+      form.parse(req);
     }
   };
 };

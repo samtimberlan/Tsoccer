@@ -3,22 +3,22 @@ $(document).ready(function() {
     $("#uploadInput").click();
   });
 
-  $("uploadInput").on("change", () => {
-    var uploadInput = $("uploadInput");
+  $("#uploadInput").on("change", () => {
+    var uploadInput = $("#uploadInput");
   });
 
-  if (uploadInput.val() != "") {
+  if ($("#uploadInput").val() != "") {
     var formData = new FormData();
-    formData.append("upload", uploadInput[0].files[0]);
+    formData.append("upload", $("#uploadInput")[0].files[0]);
 
     $.ajax({
       url: "/uploadFile",
       type: "POST",
       data: formData,
       processData: false,
-      contentData: false,
+      contentType: false,
       success: function() {
-        uploadInput.val("");
+        $("#uploadInput").val("");
       }
     });
   }
