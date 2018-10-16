@@ -1,0 +1,62 @@
+thelunb6
+TLLSNigeria1?
+
+---------- COMPANY DETAILS ---------------
+15 Dele Akingboye Street, Ifako Gbagada
+234 811 816 0491
+BVN 22141896337
+DOB of tony Monye 27 May 1973
+5555555555554444
+
+https://thelunarleadership.org/wp-admin/#welcome/steps/title
+
+Envato Token
+RV1PWQyNd9mtXSVkerYE9yQe09qr3CXg
+
+-------Demos-------
+FirePlace
+
+Developer
+
+Business
+
+-------------------
+
+box-shadow: 0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+
+box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1), 0 3px 12px rgba(0, 0, 0, 0.1);
+
+Creativo Theme(Has Ajax)
+https://demo.themefuse.com/realtor-wordpress-theme/about/
+
+
+
+
+
+Red rgb(218, 65, 65) #da4141
+Blue #0095eb
+
+© 2018 - <script type="text/javascript">
+  document.write(new Date().getFullYear());
+</script> The Lunar Leadership Society. All Rights Reserved. Built by <a href="https://timudoma.com" rel="noopener noreferrer">Tim Udoma</a>
+
+
+---------Custom CSS--------
+.developer2_slider { background-color: #fff; padding-bottom: 40px; }
+.developer2_slider .content_slider { margin: 0 !important; }
+
+.box-shadow { box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1); }
+
+/* Table */
+table td a.button { margin: 0; }
+
+/* Footer */
+#Footer .footer_copy { border-top: 1px solid rgba(0, 0, 0, 0.1); background: #000000; color: #fff }
+#Footer .footer_copy a{color: #ffffff; text-decoration: none;}
+#Footer .footer_copy  a:hover{color:#65666C}
+#Top_bar a.action_button:hover{color: black;background-color: #da4141;border: 0;box-shadow: 0 0 50px rgba(0,0,0,0.085);;transition: box-shadow .7s ease, -webkit-box-shadow .7s ease;border: 1px solid  #d7d7d7;}
+.sticky-dark #Top_bar.is-sticky .top_bar_right a:hover{color:#000}
+#Top_bar a.action_button{border: 1px solid  #d7d7d7;}
+
+
+

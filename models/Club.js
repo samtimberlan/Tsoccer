@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const clubNames = mongoose.Schema({
+const clubNames = new Schema({
   name: { type: String, default: "" },
   country: { type: String, default: "" },
   image: { type: String, default: "default.png" },
